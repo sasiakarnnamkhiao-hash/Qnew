@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEOWBLUE - Rules & Information</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Kanit', 'sans-serif'] },
+                    colors: {
+                        meow: {
+                            bg: '#F0F8FF',
+                            primary: '#4A90E2',
+                            primaryDark: '#1A1B35', // สีน้ำเงินเข้มเชื่อม Banner
+                            glass: 'rgba(255, 255, 255, 0.45)',
+                            textDark: '#2C3E50',
+                        }
+                    },
+                    boxShadow: {
+                        'cloud': '0 10px 40px rgba(74, 144, 226, 0.15)',
+                        'banner-glow': '0 20px 50px rgba(26, 27, 53, 0.6)',
+                    },
+                    animation: {
+                        'cloud-drift': 'cloudDrift 30s linear infinite',
+                        'float': 'float 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        cloudDrift: {
+                            '0%': { backgroundPosition: '0% 0%' },
+                            '100%': { backgroundPosition: '100% 100%' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(180deg, #F0F8FF 0%, #FFFFFF 100%);
+            /* Background Animation: ก้อนเมฆขยับช้าๆ */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M83.4 38.8 Q78.6 33.6 72 35 L69 31.8 Q64 26.6 57 28 L54 24.8 Q48.8 20 42.2 21.4 L39.2 18.2 Q34 13.2 27 14.6 L24 11.4 Q18.8 6.6 12.2 8 L9.2 4.8 L6 8 M83.4 38.8' fill='%23FFFFFF' fill-opacity='0.6'%3E%3C/path%3E%3C/svg%3E");
+            animation: cloud-drift 60s linear infinite;
+        }
+        /* Glassmorphism หนักๆ แวววาว */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1.5px solid rgba(255, 255, 255, 0.6);
+            border-radius: 30px;
+        }
+        .dashed-inner {
+            border: 1.5px dashed rgba(74, 144, 226, 0.3);
+            border-radius: 22px;
+        }
+        /* ลบ Scrollbar */
+        ::-webkit-scrollbar { width: 0px; }
+    </style>
+</head>
+<body class="antialiased font-sans flex justify-center p-0 sm:p-4">
+
+    <main class="w-full max-w-[480px] min-h-screen relative bg-transparent shadow-2xl sm:rounded-[40px] overflow-hidden pb-16">
+        
+        <div class="relative w-full overflow-hidden">
+            <img src="ไม่มีชื่อ 1040_20260329181709.png" alt="Banner" class="w-full h-auto relative z-10">
+            <div class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-meow-bg to-transparent z-20"></div>
+            <div class="absolute -bottom-10 left-0 w-full h-24 bg-meow-primaryDark blur-[30px] opacity-40 z-0"></div>
+        </div>
+
+        <header class="pt-10 pb-6 px-6 text-center relative">
+            <i class="fa-solid fa-cloud text-white absolute top-10 left-8 text-3xl opacity-60 animate-float"></i>
+            <i class="fa-solid fa-star text-meow-primary absolute top-16 right-10 text-sm opacity-40 animate-pulse"></i>
+
+            <h1 class="text-4xl font-bold text-meow-primaryDark mb-2 tracking-tight">MEOWBLUE</h1>
+            <p class="text-[15px] text-meow-textDark leading-relaxed px-4">
+                ยินดีต้อนรับสู่ร้าน MEOWBLUE ค้าบ <br> 
+                สนใจบริการไหนสามารถสอบถามโดยการ DM ได้เลยน้า 💙
+            </p>
+        </header>
+
+        <div class="px-6 mb-6">
+            <a href="https://docs.google.com/spreadsheets/d/1okyxGAIVsUmdGXqoGklUjzL4qF03zT7O8Us_cXs4WV0/edit?usp=drivesdk" 
+               target="_blank" 
+               class="flex items-center justify-between bg-meow-primaryDark text-white p-5 rounded-full shadow-lg hover:scale-[1.02] transition-transform">
+                <span class="font-medium flex items-center gap-2">
+                    <i class="fa-solid fa-clipboard-check"></i> ตรวจสอบคิว & อัปเดตสินค้า
+                </span>
+                <i class="fa-solid fa-chevron-right text-sm opacity-70"></i>
+            </a>
+        </div>
+
+        <div class="px-6 mb-8">
+            <div class="text-center mb-3">
+                <span class="text-[11px] bg-blue-100 text-meow-primary px-3 py-1 rounded-full font-medium">ตรวจสอบรายละเอียดฉบับเต็มจากป้ายนี้</span>
+            </div>
+            <img src="ไม่มีชื่อ 388_20260329180800.png" alt="Full Rules" class="w-full rounded-[30px] shadow-cloud border-4 border-white">
+        </div>
+
+        <div class="px-5 space-y-5">
+            
+            <div class="glass-card p-2 shadow-cloud">
+                <div class="dashed-inner p-4">
+                    <h3 class="font-bold text-meow-primary mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-cat text-sm"></i> การสั่งสินค้า
+                    </h3>
+                    <ul class="text-sm space-y-2 text-meow-textDark opacity-90">
+                        <li>1. ทักเช็คสถานะสินค้า</li>
+                        <li>2. แจ้งยอดรวม (EMS+50/ลทบ+30)</li>
+                        <li>3. โอนภายใน 1-3 วัน</li>
+                        <li>4. แจ้งเลขแทร็คในแชท</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="glass-card p-2 shadow-cloud">
+                <div class="dashed-inner p-4">
+                    <h3 class="font-bold text-meow-primary mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-truck-fast text-sm"></i> รายละเอียดค่าจัดส่ง
+                    </h3>
+                    
+                    <div class="space-y-4 text-[13px] text-meow-textDark">
+                        <div class="bg-blue-50/50 p-3 rounded-xl border border-blue-100/50">
+                            <p class="font-bold text-meow-primary mb-1">✈️ ค่าส่งต่างประเทศ (เรือ/เครื่อง/รถ)</p>
+                            <p>เริ่มต้น 100 - 400฿ + (ตามร้านพรี)</p>
+                            <p class="text-[11px] mt-1 text-meow-textMuted italic">* กรณีหารสินค้า: หารตามจำนวนชิ้นที่ได้รับ (เช่น 100฿ หาร 10 ชิ้น = ชิ้นละ 10฿)</p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="bg-white/60 p-2.5 rounded-xl border border-white text-center">
+                                <p class="text-[11px] text-meow-textMuted">EMS</p>
+                                <p class="font-bold">เริ่มต้น 50฿</p>
+                            </div>
+                            <div class="bg-white/60 p-2.5 rounded-xl border border-white text-center">
+                                <p class="text-[11px] text-meow-textMuted">ลงทะเบียน</p>
+                                <p class="font-bold">เริ่มต้น 30฿</p>
+                            </div>
+                        </div>
+
+                        <div class="text-[12px] space-y-1.5 opacity-80">
+                            <p>• กรณีน้ำหนักเกิน มีค่าส่งเพิ่มเติม</p>
+                            <p>• กรณีตีลังกา +60 - 100฿ (ตามขนาด)</p>
+                            <p class="text-red-500 font-medium">• สั่งเพิ่มหลังแพ็คเสร็จ = ต้องจ่ายค่าส่งใหม่ (เพราะต้องแกะและแพ็คใหม่ทั้งหมดค่ะ)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-2 shadow-cloud">
+                <div class="dashed-inner p-4">
+                    <h3 class="font-bold text-meow-primary mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-wallet text-sm"></i> การจอง & มัดจำ
+                    </h3>
+                    <p class="text-[13px] leading-relaxed text-meow-textDark mb-3">
+                        ยอดมัดจำ: 200-900 (70%) / 1K-3K (50%) / 3K+ (20%) <br>
+                        <span class="text-meow-primary font-medium">* เปลี่ยนเป็นผ่อนได้หากไม่สะดวกโอนยอดเดียว *</span>
+                    </p>
+                    <div class="bg-red-50 p-3 rounded-xl border border-red-100">
+                        <p class="text-red-600 font-bold text-center text-sm">ยกเลิก / เลยระยะเวลา = ไม่คืนเงินทุกกรณี</p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="pt-6 pb-2">
+                <h3 class="text-center font-bold text-meow-primaryDark mb-4 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-mobile-screen-button"></i> ช่องทางติดต่อ
+                </h3>
+                <div class="space-y-3">
+                    <a href="https://www.facebook.com/profile.php?id=61554192600355" target="_blank" class="flex items-center gap-3 bg-white/60 p-4 rounded-2xl border border-white shadow-sm hover:bg-white transition-colors">
+                        <i class="fa-brands fa-facebook text-blue-600 text-2xl"></i>
+                        <div>
+                            <p class="text-xs text-meow-textMuted uppercase font-bold">Facebook Inbox</p>
+                            <p class="text-sm font-medium">MEOWBLUE Shop</p>
+                        </div>
+                    </a>
+                    <div class="flex items-center gap-3 bg-white/60 p-4 rounded-2xl border border-white shadow-sm">
+                        <i class="fa-solid fa-receipt text-meow-primary text-2xl"></i>
+                        <div>
+                            <p class="text-xs text-meow-textMuted uppercase font-bold">ช่องทางการชำระเงิน</p>
+                            <p class="text-sm font-medium">พร้อมเพย์ / Mobile Banking</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <footer class="mt-12 text-center text-[11px] text-meow-textMuted px-10">
+            <p>รบกวนอ่านเงื่อนไขก่อนสั่งซื้อด้วยนะคะ 💙☁️</p>
+            <p class="mt-1">© 2026 MEOWBLUE - Y2K Cyber Shop</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
